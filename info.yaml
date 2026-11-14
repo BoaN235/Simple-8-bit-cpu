@@ -20,9 +20,9 @@ project:
     - "CPU_TOP.v"
     - "COMMAND_BLOCK.v"
     - "PROGRAM_BLOCK.v"
-    - "COMMANDS/ALU_AND_LOGIC.v"
-    - "COMMANDS/CONTROL_FLOW.v"
-    - "COMMANDS/DATA_TRANSFER.v"
+    - "Commands/ALU_AND_LOGIC.v"
+    - "Commands/CONTROL_FLOW.v"
+    - "Commands/DATA_TRANSFER.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
