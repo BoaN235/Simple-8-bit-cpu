@@ -25,6 +25,6 @@ wire command [7:0];
 
 program_block block (clk, reset, 1'b1, ui_in, 1'b1, command);
 
-assign uo_out = command
+assign uo_out = command;
 
 endmodule

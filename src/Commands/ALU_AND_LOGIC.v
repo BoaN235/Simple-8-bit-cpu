@@ -1,4 +1,4 @@
-module cmd_math (input clk, input reset, input selector, input command, output working_mem)
+module cmd_math (input clk, input reset, input selector, input command, output working_mem);
 
 wire [8:0] added;
 wire [8:0] subtracted;
@@ -13,7 +13,7 @@ cmd_div divide (clk, reset, divided);
 reg [8:0] product;
 
 always @(*) begin
-    if (selector = 5) begin
+    if (selector == 5) begin
         case (command [5:4]) 
             2'b00: product = added;
             2'b01: product = subtracted;
@@ -23,6 +23,6 @@ always @(*) begin
     end
 end
 
-assign working_mem = product
+assign working_mem = product;
 
 endmodule

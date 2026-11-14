@@ -8,7 +8,7 @@ module program_block(
     input read_enable,
 
     output [7:0] read_data
-)
+);
 
 reg we = 1'b1;
 reg download = 1'b1;
@@ -26,16 +26,16 @@ always @(posedge clk) begin
         write_address <= write_address + 1;
     end 
     
-    if (write_address >= 15) begin
+    if (write_address >= 127) begin
     download = 1'b0;
 end
 end
 
 
 
-reg [7:0] program_counter = 15;
+reg [7:0] program_counter = 127;
 always @(posedge clk) begin
-    if (!download & program_counter >= 15) begin
+    if (!download & program_counter >= 127) begin
             program_counter <= 0;
             we = 1'b0; // set read
     end
@@ -57,10 +57,10 @@ program_ram ram1 (
 endmodule
 
 module program_ram
-  # (parameter ADDR_WIDTH = 8,
-     parameter DATA_WIDTH = 24,
-     parameter DEPTH = 256               // Number of words; normally 2**ADDR_WIDTH
-    )
+  # (parameter ADDR_WIDTH = 7,
+     parameter DATA_WIDTH = 20,
+     parameter DEPTH = 128               // Number of words; normally 2**ADDR_WIDTH
+    );
 
   ( 	input 					clk,
    		input [ADDR_WIDTH-1:0]	addr,
