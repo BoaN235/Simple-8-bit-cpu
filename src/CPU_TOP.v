@@ -23,7 +23,7 @@ wire _unused = &{ena, uio_in, 1'b0};
 
 wire command [7:0];
 
-program_block block (clk, reset, 1'b1, ui_in, 1'b1, command);
+program_block block (clk, rst_n, 1'b1, ui_in, 1'b1, command);
 
 assign uo_out = command;
 

@@ -43,12 +43,14 @@ always @(posedge clk) begin
         program_counter <= program_counter + 1;
     end
 end
+assign read_address = program_counter
+
 
 program_ram ram1 (
     .clk(clk), 
     .addr(data_valid ? write_address : read_address),
     .data_in(incoming_data),
-    .data_out(program_counter),
+    .data_out(ram_data_out),
     .cs(data_valid | read_enable),
     .we(we)
     );
