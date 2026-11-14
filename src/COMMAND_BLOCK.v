@@ -19,7 +19,7 @@ cmd_read read (clk, reset, selector, address, output_bool, read_write);
 cmd_save save (clk, reset, selector, working_mem, data_out, address, output_bool, read_write);
 cmd_write write (clk, reset, selector, address, output_bool, read_write);
 cmd_math math (clk, reset, selector, command, working_mem);
-cmd_logic logic_cmds (clk, reset, selector, command, working_mem);
+//cmd_logic logic_cmds (clk, reset, selector, command, working_mem);
 
 always @(command) begin
     if (selector == 0) begin // I split it up so its easier to read and understand each cmd

@@ -5,10 +5,10 @@ wire [8:0] subtracted;
 wire [8:0] multiplied;
 wire [8:0] divided;
 
-cmd_add add (clk, reset, added);
-cmd_sub subtract (clk, reset, subtracted);
-cmd_mul multiply (clk, reset, multiplied);
-cmd_div divide (clk, reset, divided);
+//cmd_add add (clk, reset, added);
+//cmd_sub subtract (clk, reset, subtracted);
+//cmd_mul multiply (clk, reset, multiplied);
+//cmd_div divide (clk, reset, divided);
 
 reg [8:0] product;
 

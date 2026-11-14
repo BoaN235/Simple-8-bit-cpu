@@ -21,7 +21,7 @@ assign uio_out = 8'b00000000;
 assign uio_oe  = 8'b00000000;
 wire _unused = &{ena, uio_in, 1'b0};
 
-wire command [7:0];
+wire [7:0] command;
 
 program_block block (clk, rst_n, 1'b1, ui_in, 1'b1, command);
 
